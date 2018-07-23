@@ -25,7 +25,7 @@ function gcd(r0,r1) {
     return t0
 }
 
-console.log(gcd(973,301))
+//console.log(gcd(973,301))
 
 //Recursive version of Euclidean Algorithm for GCD
 function gcdr(r0,r1) {
@@ -39,15 +39,15 @@ function gcdr(r0,r1) {
 //Recursive version of Euclidean Algorithm for GCD short version
 var gcdr = (r0,r1) => r0 % r1 == 0 ? r1 : gcdr(r1, r0 % r1)
 
-console.log(gcdr(27,21))
-prime = 11
+//console.log(gcdr(27,21))
+//prime = 11
 //Display Phi function
-Array.from({length: prime}, (x,i) => console.log(`gcd(${i},26)=${gcdr(i,26)}`))
+//Array.from({length: prime}, (x,i) => console.log(`gcd(${i},26)=${gcdr(i,26)}`))
 
 var phi = prime => {
     rp = Array.from({length: prime}, (x,i) => i)
     
-    console.log(rp.reduce((acc,iter)=>(gcdr(iter,prime)===1?acc+1:acc)))
+    return (rp.reduce((acc,iter)=>(gcdr(iter,prime)===1?acc+1:acc)))
 }
 
 
@@ -87,3 +87,4 @@ with the key: k = (a,b), which has the restriction: gcd(a,26) = 1.
 
 module.exports.gcd = gcd;
 module.exports.phi = phi;
+module.exports.gcdr = gcdr;

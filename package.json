@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bn.js": "^4.11.8",
+    "clear-module": "^3.0.0",
     "ijavascript": "^5.0.20"
   },
   "devDependencies": {},
